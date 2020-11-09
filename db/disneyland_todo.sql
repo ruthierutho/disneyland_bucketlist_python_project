@@ -21,7 +21,6 @@ CREATE TABLE attractions (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
     land_id INT REFERENCES lands(id),
-    category VARCHAR(255),
     visited BOOLEAN,
     visit_count INT,
     notes TEXT
