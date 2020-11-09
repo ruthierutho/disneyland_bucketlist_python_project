@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Lands</h2>
+    <ul>
+        {% for land in lands %}
+        <li>{{ land.name }} in {{ land.park.name }}
+            <p>{{ land.theme }}</p>
+        </li>
+        
+            
+        {% endfor %}
+    </ul>
+    
+{% endblock content %}

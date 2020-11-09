@@ -27,7 +27,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        park = Park(row['name'], row['id'])
+        park = Park(result['name'], result['id'])
     return park
 
 def delete_all():

@@ -30,8 +30,8 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        park = park_repository.select(row['park_id'])
-        land = Land(row['name'], park, row['theme'], row['visited'], row['id'])
+        park = park_repository.select(result['park_id'])
+        land = Land(result['name'], park, result['theme'], result['visited'], result['id'])
     return land
 
 def delete_all():

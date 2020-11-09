@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Attractions</h2>
+    <ul>
+        {% for attraction in attractions %}
+        <li>{{ attraction.name }} in {{ attraction.land.name }}
+            <p>Visited {{ attraction.visit_count }} times</p>
+            <p>My notes: {{ attraction.notes}} </p>
+        </li>
+        
+            
+        {% endfor %}
+    </ul>
+    
+{% endblock content %}

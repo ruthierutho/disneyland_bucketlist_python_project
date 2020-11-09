@@ -23,6 +23,10 @@ land_repository.save(land2)
 
 attraction1 = Attraction("It's a small world", land1, True, 1, "So cute!")
 attraction_repository.save(attraction1)
+attraction2 = Attraction("Space Mountain", land2, False, 0, "Bit scared!")
+attraction_repository.save(attraction2)
+attraction3 = Attraction("Peter Pan's Flight", land1, False, 0, "So excited for this!")
+attraction_repository.save(attraction3)
 
 
 pdb.set_trace()
