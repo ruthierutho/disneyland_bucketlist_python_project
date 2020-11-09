@@ -9,10 +9,10 @@ CREATE TABLE parks (
     name VARCHAR(255)
 );
 
-CREAT TABLE lands (
+CREATE TABLE lands (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
-    park_id INT REFERENCES users(id),
+    park_id INT REFERENCES parks(id),
     theme VARCHAR(255),
     visited BOOLEAN
 );
