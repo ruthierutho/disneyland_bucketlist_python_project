@@ -19,6 +19,9 @@ class TestAttraction(unittest.TestCase):
     def test_attraction_land_has_park(self):
         self.assertEqual("Magic Kingdom", self.attraction1.land.park.name)
 
+    def test_attraction_land_has_theme(self):
+        self.assertEqual("Fairytale", self.attraction1.land.theme)
+
     def test_attraction_has_visit_true(self):
         self.assertEqual(True, self.attraction1.visited)
 
