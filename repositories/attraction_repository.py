@@ -11,7 +11,7 @@ def save(attraction):
     values = [attraction.name, attraction.land.id, attraction.visited, attraction.visit_count, attraction.notes]
     results = run_sql(sql, values)
     attraction.id = results[0]['id']
-    return lattraction
+    return attraction
 
 def select_all():
     attractions = []

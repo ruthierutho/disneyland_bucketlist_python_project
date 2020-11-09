@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Parks</h2>
+    <ul>
+        {% for park in all_parks %}
+        <li>{{ park.name }}</li>
+            
+        {% endfor %}
+    </ul>
+    
+{% endblock content %}

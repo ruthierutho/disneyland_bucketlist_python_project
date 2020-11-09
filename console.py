@@ -13,9 +13,16 @@ park_repository.delete_all()
 
 park1 = Park("Magic Kingdom")
 park_repository.save(park1)
-
 park2 = Park("Disney Studios")
 park_repository.save(park2)
+
+land1 = Land("Fantasyland", park1, "Fairytale", True)
+land_repository.save(land1)
+land2 = Land("Discoveryland", park1, "Steampunk", False)
+land_repository.save(land2)
+
+attraction1 = Attraction("It's a small world", land1, True, 1, "So cute!")
+attraction_repository.save(attraction1)
 
 
 pdb.set_trace()
