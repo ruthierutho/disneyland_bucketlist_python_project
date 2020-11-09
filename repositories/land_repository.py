@@ -5,8 +5,8 @@ from models.land import Land
 from repositories import park_repository
 
 def save(land):
-    sql= "INSERT INTO lands (name, park_id, theme, visited) VALUES (%s, %s, %s, %s) RETURNING id"
-    values = [land.name, land.park.id, land.theme, land.visited]
+    sql= "INSERT INTO lands (name, park_id, visited) VALUES (%s, %s, %s) RETURNING id"
+    values = [land.name, land.park.id, land.visited]
     results = run_sql(sql, values)
     land.id = results[0]['id']
     return land
@@ -19,7 +19,7 @@ def select_all():
 
     for row in results:
         park = park_repository.select(row['park_id'])
-        land = Land(row['name'], park, row['theme'], row['visited'], row['id'])
+        land = Land(row['name'], park, row['visited'], row['id'])
         lands.append(land)
     return lands
 
@@ -31,7 +31,7 @@ def select(id):
 
     if result is not None:
         park = park_repository.select(result['park_id'])
-        land = Land(result['name'], park, result['theme'], result['visited'], result['id'])
+        land = Land(result['name'], park, result['visited'], result['id'])
     return land
 
 def delete_all():
@@ -44,6 +44,6 @@ def delete(id):
     run_sql(sql, values)
 
 def update(land):
-    sql = "UPDATE lands SET (name, park_id, theme, visited) = (%s, %s, %s, %s) WHERE is = %s"
-    values = [land.name, land.park.id, land.theme, land.visited]
+    sql = "UPDATE lands SET (name, park_id, visited) = (%s, %s, %s) WHERE is = %s"
+    values = [land.name, land.park.id, land.visited]
     run_sql(sql, values)

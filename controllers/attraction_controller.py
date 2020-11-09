@@ -11,3 +11,8 @@ attractions_blueprint = Blueprint("attractions", __name__)
 def attractions():
     attractions = attraction_repository.select_all()
     return render_template("attractions/index.html", attractions = attractions)
+
+@attractions_blueprint.route("/still_to_see")
+def still_to_see():
+    attractions = attraction_repository.select_all()
+    return render_template("attractions/still_to_see.html", attractions = attractions)

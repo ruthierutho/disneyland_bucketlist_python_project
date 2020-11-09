@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Still to See</h2>
+    <ul>
+        {% for attraction in attractions if attraction.visited == False %}
+        <li>{{ attraction.name }} in {{ attraction.land.name }}
+            <p>Visited {{ attraction.visit_count }} times</p>
+            <p>My notes: {{ attraction.notes}} </p>
+        </li>
+        
+            
+        {% endfor %}
+    </ul>
+    
+{% endblock content %}
