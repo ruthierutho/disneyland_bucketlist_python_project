@@ -12,14 +12,14 @@ CREATE TABLE parks (
 CREATE TABLE lands (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
-    park_id INT REFERENCES parks(id),
+    park_id INT REFERENCES parks(id) ON DELETE CASCADE,
     visited BOOLEAN
 );
 
 CREATE TABLE attractions (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
-    land_id INT REFERENCES lands(id),
+    land_id INT REFERENCES lands(id) ON DELETE CASCADE,
     visited BOOLEAN,
     visit_count INT,
     notes TEXT

@@ -11,5 +11,8 @@
             {% endif %}
            </p>
         <a href="/lands/{{land.id}}/edit">Edit</a>
+        <form class="delete-form" action="/lands/{{land.id}}/delete" method="POST">
+            <button>Delete</button>
+        </form>
     </div>
 {% endblock content %}

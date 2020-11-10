@@ -54,4 +54,10 @@ def update_land(id):
     land_repository.update(land)
     return redirect("/lands")
 
+#DELETE
+@lands_blueprint.route("/lands/<id>/delete", methods=['POST'])
+def delete_land(id):
+    land_repository.delete(id)
+    return redirect('/lands')
+
 
