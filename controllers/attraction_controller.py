@@ -35,10 +35,9 @@ def create_attraction():
     name = request.form['name']
     land_id = request.form['land_id']
     visited = request.form['visited']
-    visit_count = request.form['visit_count']
     notes = request.form['notes']
     land = land_repository.select(land_id)
-    attraction = Attraction(name, land, visited, visit_count, notes)
+    attraction = Attraction(name, land, visited, notes)
     attraction_repository.save(attraction)
     return redirect("/still_to_see")
 
@@ -61,10 +60,9 @@ def update_attraction(id):
     name = request.form['name']
     land_id = request.form['land_id']
     visited = request.form['visited']
-    visit_count = request.form['visit_count']
     notes = request.form['notes']
     land = land_repository.select(land_id)
-    attraction = Attraction(name, land, visited, visit_count, notes, id)
+    attraction = Attraction(name, land, visited, notes, id)
     attraction_repository.update(attraction)
     return redirect("/attractions")
 
