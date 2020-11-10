@@ -2,6 +2,10 @@
 
 {% block content %}
     <h2>Parks</h2>
+
+    <p>
+        <a href="/parks/new">Add Park</a>
+    </p>
     <ul>
         {% for park in all_parks %}
         <li>{{ park.name }}</li>
