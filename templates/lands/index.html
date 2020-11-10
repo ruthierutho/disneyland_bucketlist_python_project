@@ -4,12 +4,12 @@
     <h2>Lands</h2>
 
     <p>
-       <button><a href="/lands/new">Add Land</a></button> 
+       <button><a class = "link" href="/lands/new">Add Land</a></button> 
     </p>
     <h3>Magic Kindom:</h3>
     <ul>
         {% for land in lands if land.park.name == "Magic Kingdom" %}
-        <li><a href="/lands/{{land.id}}">{{ land.name }}</a>
+        <li><a class = "link" href="/lands/{{land.id}}">{{ land.name }}</a>
            <p> 
             {% if land.visited == True %}
                 -Seen!
@@ -23,7 +23,7 @@
     <h3>Disney Studios:</h3>
     <ul>
         {% for land in lands if land.park.name == "Disney Studios" %}
-        <li><a href="/lands/{{land.id}}">{{ land.name }}</a>
+        <li><a class = "link" href="/lands/{{land.id}}">{{ land.name }}</a>
            <p> 
             {% if land.visited == True %}
                 -Seen!

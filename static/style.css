@@ -1,12 +1,46 @@
 #header {
   text-decoration: none;
   color: darkblue;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 28px;
+  margin: 0px;
    
 } 
+
+h1 {
+  margin: 0px;
+  padding: 10px;
+}
+
+#top_of_page {
+  background-color: rgba(0, 139, 139, 0.44);
+  padding: 10px;
+
+}
 
 .navbar {
   text-decoration: none;
   color: darkcyan;
+  outline: darkcyan;
+  font-size: 16px;
 
 }
 
+body {
+  background-color: rgb(255, 232, 101);
+  color: darkcyan;
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  margin: 0px;
+  padding: 20px;
+
+}
+
+
+
+.link {
+  text-decoration: none;
+  color: darkcyan;
+  font-weight: bold;
+}

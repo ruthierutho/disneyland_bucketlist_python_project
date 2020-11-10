@@ -4,12 +4,12 @@
     <h2>Attractions</h2>
 
     <p>
-       <button> <a href="/attractions/new">Add Attraction</a> </button>
+       <button> <a class = "link" href="/attractions/new">Add Attraction</a> </button>
     </p>
 
     <ul>
         {% for attraction in attractions %}
-        <li><a href="/attractions/{{attraction.id}}">{{ attraction.name }}</a> in {{ attraction.land.name }}
+        <li><a class = "link" href="/attractions/{{attraction.id}}">{{ attraction.name }}</a> in {{ attraction.land.name }}
             <p> 
                 {% if attraction.visited == True %}
                     -Seen!

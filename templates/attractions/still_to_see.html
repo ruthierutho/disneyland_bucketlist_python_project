@@ -4,7 +4,7 @@
     <h2>Still to See</h2>
     <ul>
         {% for attraction in attractions if attraction.visited == False %}
-        <li><a href="/attractions/{{attraction.id}}">{{ attraction.name }}</a> in {{ attraction.land.name }}
+        <li><a class = "link" href="/attractions/{{attraction.id}}">{{ attraction.name }}</a> in {{ attraction.land.name }}
          
             <p>My notes: {{ attraction.notes}} </p>
         </li>

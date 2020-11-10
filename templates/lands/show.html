@@ -9,8 +9,10 @@
             {% else %}
                 -Still to see!
             {% endif %}
-           </p>
-        <a href="/lands/{{land.id}}/edit">Edit</a>
+        </p>
+        <p>
+        <button><a class = "link" href="/lands/{{land.id}}/edit">Edit</a></button>
+        </p>
         <form class="delete-form" action="/lands/{{land.id}}/delete" method="POST">
             <button>Delete</button>
         </form>

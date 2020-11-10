@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Disney Bucket List</title>
+        <title>Disneyland Dreams</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"
     </head>
     <body>
-        <header>
-            <a id="header" href="/"><h1>Disney Bucket List</h1></a>
+        <header id="top_of_page">
+            <a id="header" href="/"><h1>Disneyland Dreams</h1></a>
         <nav>
             
                 <button><a class="navbar" href="/parks">Parks</a></button>
@@ -16,6 +16,7 @@
                 <button><a class="navbar" href="/seen">Seen</a></button>
           
         </nav>
+        <br>
         </header>
         <section>
             {% block content %}

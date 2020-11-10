@@ -4,11 +4,11 @@
     <h2>Parks</h2>
 
     <p>
-        <button><a href="/parks/new">Add Park</a></button>
+        <button><a class = "link" href="/parks/new">Add Park</a></button>
     </p>
     <ul>
         {% for park in all_parks %}
-        <li><a href="/parks/{{park.id}}">{{ park.name }}</a></li>
+        <li><a class = "link" href="/parks/{{park.id}}">{{ park.name }}</a></li>
             
         {% endfor %}
     </ul>
