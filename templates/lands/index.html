@@ -2,6 +2,11 @@
 
 {% block content %}
     <h2>Lands</h2>
+
+    <p>
+        <a href="/lands/new">Add Land</a>
+    </p>
+
     <ul>
         {% for land in lands %}
         <li>{{ land.name }} in {{ land.park.name }}

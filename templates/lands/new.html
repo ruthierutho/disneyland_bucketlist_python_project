@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+    <h3>Add a Land</h3>
+    <form action="/lands" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Add a Land Name">
+        <label for="park">Select a Park:</label>
+            <select name="park_id" id="park">
+                {% for park in parks %}
+                <option value="{{ park.id }}">{{ park.name }}</option>
+                {% endfor %}
+            </select>
+        <label for="visited">Visited:</label>
+        <select name="visited" id="visited">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+        <input type="submit" value="add">
+    </form>    
+
+
+{% endblock content %}  
