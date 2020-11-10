@@ -6,11 +6,10 @@
     <p>
        <button><a href="/lands/new">Add Land</a></button> 
     </p>
-
+    <h3>Magic Kindom:</h3>
     <ul>
-        {% for land in lands %}
-        <li><a href="/lands/{{land.id}}">{{ land.name }}</a> in 
-            <b>{{ land.park.name }}</b>
+        {% for land in lands if land.park.name == "Magic Kingdom" %}
+        <li><a href="/lands/{{land.id}}">{{ land.name }}</a>
            <p> 
             {% if land.visited == True %}
                 -Seen!
@@ -19,8 +18,20 @@
             {% endif %}
            </p>
         </li>
-        
-            
+        {% endfor %}
+    </ul>
+    <h3>Disney Studios:</h3>
+    <ul>
+        {% for land in lands if land.park.name == "Disney Studios" %}
+        <li><a href="/lands/{{land.id}}">{{ land.name }}</a>
+           <p> 
+            {% if land.visited == True %}
+                -Seen!
+            {% else %}
+                -Still to see!
+            {% endif %}
+           </p>
+        </li>
         {% endfor %}
     </ul>
     

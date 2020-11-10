@@ -6,9 +6,9 @@
     <label for="name">Edit a land:</label>
     <input type="text" id="name" name="name" value="{{ land.name }}">
     <label for="park">Select a Park:</label>
-            <select name="park_id" id="park">
+            <select name="park_id" id="park" value="{{ land.park.name }}">
                 {% for park in parks %}
-                <option value="{{ park.id }}">{{ park.name }}</option>
+                <option value="{{ park.id }}" {% if land.park.id == park.id %} selected="selected"{% endif %}>{{ park.name }}</option>
                 {% endfor %}
             </select>
         <label for="visited">Visited:</label>

@@ -7,10 +7,10 @@
     <input type="text" id="name" name="name" value="{{ attraction.name }}">
     </p>
     <p>
-    <label for="park">Select a Land:</label>
-        <select name="land_id" id="land">
+    <label for="land">Select a Land:</label>
+        <select name="land_id" id="land" value="{{ attraction.land.name }}">
             {% for land in lands %}
-            <option value="{{ land.id }}">{{ land.name }}</option>
+            <option value="{{ land.id }}"" {% if attraction.land.id == land.id %} selected="selected"{% endif %}>{{ land.name }}</option>
             {% endfor %}
         </select>
     </p>

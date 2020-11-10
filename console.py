@@ -20,6 +20,7 @@ land1 = Land("Fantasyland", park1, True)
 land_repository.save(land1)
 land2 = Land("Discoveryland", park1, False)
 land_repository.save(land2)
+land3 = Land("Toon Studio", park2, False)
 
 attraction1 = Attraction("It's a small world", land1, True, 1, "So cute!")
 attraction_repository.save(attraction1)
@@ -27,6 +28,7 @@ attraction2 = Attraction("Space Mountain", land2, False, 0, "Bit scared!")
 attraction_repository.save(attraction2)
 attraction3 = Attraction("Peter Pan's Flight", land1, False, 0, "So excited for this!")
 attraction_repository.save(attraction3)
+attraction4 = Attraction("Crush's Coaster", land3, False, 0, "Looks awesome!")
 
 
 pdb.set_trace()

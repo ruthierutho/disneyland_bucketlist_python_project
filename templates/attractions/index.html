@@ -10,7 +10,13 @@
     <ul>
         {% for attraction in attractions %}
         <li><a href="/attractions/{{attraction.id}}">{{ attraction.name }}</a> in {{ attraction.land.name }}
-            <p>Visited {{ attraction.visit_count }} times</p>
+            <p> 
+                {% if attraction.visited == True %}
+                    -Seen!
+                {% else %}
+                    -Still to see!
+                {% endif %}
+               </p>
             <p>My notes: {{ attraction.notes}} </p>
         </li>
         

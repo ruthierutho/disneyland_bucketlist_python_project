@@ -5,7 +5,7 @@
     <ul>
         {% for attraction in attractions if attraction.visited == True %}
         <li>{{ attraction.name }} in {{ attraction.land.name }}
-            <p>Visited {{ attraction.visit_count }} times</p>
+           
             <p>My notes: {{ attraction.notes}} </p>
         </li>
         
