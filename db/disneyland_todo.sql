@@ -21,6 +21,5 @@ CREATE TABLE attractions (
     name VARCHAR(255),
     land_id INT REFERENCES lands(id) ON DELETE CASCADE,
     visited BOOLEAN,
-    visit_count INT,
     notes TEXT
 );
