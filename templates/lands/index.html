@@ -9,8 +9,15 @@
 
     <ul>
         {% for land in lands %}
-        <li>{{ land.name }} in {{ land.park.name }}
-           
+        <li><a href="/lands/{{land.id}}">{{ land.name }}</a> in 
+            <b>{{ land.park.name }}</b>
+           <p> 
+            {% if land.visited == True %}
+                -Seen!
+            {% else %}
+                -Still to see!
+            {% endif %}
+           </p>
         </li>
         
             

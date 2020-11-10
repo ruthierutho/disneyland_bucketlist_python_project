@@ -3,7 +3,7 @@
 {% block content %}
 <h3>Edit a Park</h3>
 <form action="/parks/{{park.id}}" method="POST">
-    <label for="name">Select a park:</label>
+    <label for="name">Edit park:</label>
     <input type="text" id="name" name="name" value="{{ park.name }}">
     <input type="submit" value="update">
 </form>    

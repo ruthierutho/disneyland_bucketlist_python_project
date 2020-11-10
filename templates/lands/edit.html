@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>Edit a Land</h3>
+<form action="/lands/{{land.id}}" method="POST">
+    <label for="name">Edit a land:</label>
+    <input type="text" id="name" name="name" value="{{ land.name }}">
+    <label for="park">Select a Park:</label>
+            <select name="park_id" id="park">
+                {% for park in parks %}
+                <option value="{{ park.id }}">{{ park.name }}</option>
+                {% endfor %}
+            </select>
+        <label for="visited">Visited:</label>
+        <select name="visited" id="visited">
+            <option value="true" {% if land.visited == True %} selected="selected" {% endif %}>
+                Yes</option>
+            <option value="false" {% if land.visited == False %} selected ="selected" {% endif %}>
+                No</option>
+        </select>
+    <input type="submit" value="update">
+</form>    
+
+
+
+{% endblock content %}

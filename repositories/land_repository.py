@@ -45,5 +45,5 @@ def delete(id):
 
 def update(land):
     sql = "UPDATE lands SET (name, park_id, visited) = (%s, %s, %s) WHERE id = %s"
-    values = [land.name, land.park.id, land.visited]
+    values = [land.name, land.park.id, land.visited, land.id]
     run_sql(sql, values)
