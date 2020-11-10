@@ -40,6 +40,6 @@ def delete(id):
     run_sql(sql, values)
 
 def update(park):
-    sql = "UPDATE parks SET (name) = (%s) WHERE is = %s"
+    sql = "UPDATE parks SET (name) = (%s) WHERE id = %s"
     values = [park.name, park.id]
     run_sql(sql, values)

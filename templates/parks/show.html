@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div>
+        {{park.name}}
+        <a href="/parks/{{park.id}}/edit">Edit</a>
+    </div>
+{% endblock content %}

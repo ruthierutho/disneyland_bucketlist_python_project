@@ -26,3 +26,24 @@ def create_park():
     park_repository.save(park)
     return redirect('/lands')
 
+#SHOW
+@parks_blueprint.route("/parks/<id>", methods=['GET'])
+def show_park(id):
+    park = park_repository.select(id)
+    return render_template('parks/show.html', park = park)
+
+#EDIT
+@parks_blueprint.route("/parks/<id>/edit", methods=['GET'])
+def edit_park(id):
+    park = park_repository.select(id)
+    return render_template('parks/edit.html', park = park)
+
+#UPDATE
+@parks_blueprint.route("/parks/<id>", methods=['POST'])
+def update_park(id):
+    name = request.form['name']
+    park = Park(name, id=id)
+    park_repository.update(park)
+    return redirect("/parks")
+
+
