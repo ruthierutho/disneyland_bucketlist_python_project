@@ -13,5 +13,8 @@
         <p>Visits: {{attraction.visit_count}}</p>
         <p>Notes: {{attraction.notes}}</p>
         <a href="/attractions/{{attraction.id}}/edit">Edit</a>
+        <form class="delete-form" action="/attractions/{{attraction.id}}/delete" method="POST">
+            <button>Delete</button>
+        </form>
     </div>
 {% endblock content %}

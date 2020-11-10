@@ -67,3 +67,9 @@ def update_attraction(id):
     attraction = Attraction(name, land, visited, visit_count, notes, id)
     attraction_repository.update(attraction)
     return redirect("/attractions")
+
+#DELETE
+@attractions_blueprint.route("/attractions/<id>/delete", methods=['POST'])
+def delete_attraction(id):
+    attraction_repository.delete(id)
+    return redirect('/attractions')
