@@ -42,7 +42,7 @@ def edit_park(id):
 @parks_blueprint.route("/parks/<id>", methods=['POST'])
 def update_park(id):
     name = request.form['name']
-    park = Park(name, id=id)
+    park = Park(name, id)
     park_repository.update(park)
     return redirect("/parks")
 
