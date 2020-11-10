@@ -1,4 +1,10 @@
-body > header {
+#header {
   text-decoration: none;
+  color: purple;
    
 } 
+
+.navbar {
+  text-decoration: none;
+  color: black;
+}
