@@ -9,7 +9,7 @@
 
     <ul>
         {% for attraction in attractions %}
-        <li>{{ attraction.name }} in {{ attraction.land.name }}
+        <li><a href="/attractions/{{attraction.id}}">{{ attraction.name }}</a> in {{ attraction.land.name }}
             <p>Visited {{ attraction.visit_count }} times</p>
             <p>My notes: {{ attraction.notes}} </p>
         </li>

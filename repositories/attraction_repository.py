@@ -32,8 +32,8 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        land = land_repository.select(row['land_id'])
-        attraction = Attraction(row['name'], land, row['visited'], row['visit_count'], row['notes'], row['id'])
+        land = land_repository.select(result['land_id'])
+        attraction = Attraction(result['name'], land, result['visited'], result['visit_count'], result['notes'], result['id'])
     return attraction
 
 def delete_all():
@@ -47,5 +47,5 @@ def delete(id):
 
 def update(attraction):
     sql = "UPDATE attractions SET (name, land_id, visited, visit_count, notes) = (%s, %s, %s, %s, %s) WHERE id = %s"
-    values = [attraction.name, attraction.land.id, attraction.visited, attraction.visit_count, attraction.notes]
+    values = [attraction.name, attraction.land.id, attraction.visited, attraction.visit_count, attraction.notes, attraction.id]
     run_sql(sql, values)

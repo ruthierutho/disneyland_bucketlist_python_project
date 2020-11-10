@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Edit Attraction</h3>
+<form action="/attractions/{{attraction.id}}" method="POST">
+    <p>
+    <label for="name">Edit Attraction:</label>
+    <input type="text" id="name" name="name" value="{{ attraction.name }}">
+    </p>
+    <p>
+    <label for="park">Select a Land:</label>
+        <select name="land_id" id="land">
+            {% for land in lands %}
+            <option value="{{ land.id }}">{{ land.name }}</option>
+            {% endfor %}
+        </select>
+    </p>
+    <p>
+    <label for="visited">Visited:</label>
+    <select name="visited" id="visited">
+        <option value="true" {% if attraction.visited == True %} selected="selected" {% endif %}>
+            Yes</option>
+        <option value="false" {% if attraction.visited == False %} selected ="selected" {% endif %}>
+            No</option>
+    </select>
+    </p>   
+    <p>
+    <label for="visit_count">Visit Count:</label>
+        <input type="number" id="visit_count" name="visit_count" value="{{ attraction.visit_count }}"">
+    </p>
+    <p>
+    <label for="notes">Notes:</label>
+    <textarea name="notes" id="notes" cols="30" rows="10" value="{{ attraction.notes }}">{{ attraction.notes }}</textarea>
+    </p>
+    <input type="submit" value="update">
+</form>       
+
+
+{% endblock content %}
