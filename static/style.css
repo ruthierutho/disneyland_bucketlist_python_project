@@ -1,19 +1,4 @@
-body {
-    background: url('/static/images/disneyland_background.jpg');
-    background-size: cover;
-    font-family: 'Times New Roman', Times, serif;
-    color: whitesmoke;
-
-}
-
-body > header > nav {
-    background-color: white;
-
-}
-
-body > header > nav > ul > li{
-    color: whitesmoke;
-    text-decoration: none;
-    text-align: center;
-    list-style-type: none;
-}
+body > header > nav  {
+  text-decoration: none;
+   
+} 
