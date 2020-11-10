@@ -16,3 +16,28 @@ def attractions():
 def still_to_see():
     attractions = attraction_repository.select_all()
     return render_template("attractions/still_to_see.html", attractions = attractions)
+
+@attractions_blueprint.route("/seen")
+def seen():
+    attractions = attraction_repository.select_all()
+    return render_template("attractions/seen.html", attractions = attractions)
+
+#NEW
+@attractions_blueprint.route("/attractions/new", methods=['GET'])
+def new_attraction():
+    attractions = attraction_repository.select_all()
+    lands = land_repository.select_all()
+    return render_template("attractions/new.html", attractions = attractions, lands = lands)
+
+#CREATE
+@attractions_blueprint.route("/attractions", methods=['POST'])
+def create_attraction():
+    name = request.form['name']
+    land_id = request.form['land_id']
+    visited = request.form['visited']
+    visit_count = request.form['visit_count']
+    notes = request.form['notes']
+    land = land_repository.select(land_id)
+    attraction = Attraction(name, land, visited, visit_count, notes)
+    attraction_repository.save(attraction)
+    return redirect("/still_to_see")

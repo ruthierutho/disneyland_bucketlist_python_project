@@ -28,4 +28,4 @@ def create_land():
     park = park_repository.select(park_id)
     land = Land(name, park, visited)
     land_repository.save(land)
-    return redirect('/attractions')
+    return redirect("/attractions")
