@@ -1,34 +1,39 @@
 #header {
   text-decoration: none;
-  color: darkblue;
+  color: rgb(190, 9, 100);
   font-family: 'Times New Roman', Times, serif;
   font-size: 28px;
   margin: 0px;
+  align-content: center;
    
 } 
 
 h1 {
   margin: 0px;
   padding: 10px;
+  align-content: center;
 }
 
 #top_of_page {
-  background-color: rgba(0, 139, 139, 0.44);
+  background-color: rgba(218, 175, 4, 0.44);
   padding: 10px;
 
 }
 
 .navbar {
   text-decoration: none;
-  color: darkcyan;
-  outline: darkcyan;
+  color: hotpink;
+  outline: hotpink;
   font-size: 16px;
 
 }
 
 body {
-  background-color: rgb(255, 232, 101);
-  color: darkcyan;
+  /* background: url('/static/images/castlebig.jpg'); */
+  background-size: cover;
+  background-repeat: repeat;
+  background-color: rgb(247, 143, 160);
+  color: rgb(255, 238, 0);
   text-decoration: none;
   font-family: 'Times New Roman', Times, serif;
   font-size: 16px;
@@ -41,6 +46,12 @@ body {
 
 .link {
   text-decoration: none;
-  color: darkcyan;
+  color: rgb(255, 204, 0);
   font-weight: bold;
+}
+
+.linkb {
+  text-decoration: none;
+  color: deeppink;
+  
 }
