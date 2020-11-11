@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h3>Save your magical memories forever!</h3>
+    <h2>Save your magical memories forever!</h2>
+
+    <ul>
+        {% for park in parks %}
+        <li><h3><a class = "link" href="/parks/{{park.id}}">{{ park.name }}</a></h3></li>
+            
+        {% endfor %}
+    </ul>
 {% endblock content %}

@@ -1,12 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Lands</h2>
-
-    <p>
-       <button><a class = "linkb" href="/lands/new">Add Land</a></button> 
-    </p>
-    <h3>Magic Kindom:</h3>
+<section id = "featured">
+   <div class = "parkland">
+    <h2>Magic Kindom:</h2>
     <ul>
         {% for land in lands if land.park.name == "Magic Kingdom" %}
         <li><a class = "link" href="/lands/{{land.id}}">{{ land.name }}</a>
@@ -16,11 +13,17 @@
             {% else %}
                 -Still to see!
             {% endif %}
+            
            </p>
         </li>
         {% endfor %}
     </ul>
-    <h3>Disney Studios:</h3>
+    <p>
+        <button><a class = "linkb" href="/lands/new">Add Land</a></button> 
+     </p>
+    </div>
+    <div class = "parkland">
+    <h2>Disney Studios:</h2>
     <ul>
         {% for land in lands if land.park.name == "Disney Studios" %}
         <li><a class = "link" href="/lands/{{land.id}}">{{ land.name }}</a>
@@ -34,5 +37,10 @@
         </li>
         {% endfor %}
     </ul>
-    
+
+    <p>
+        <button><a class = "linkb" href="/lands/new">Add Land</a></button> 
+    </p>
+    </div>
+</section>
 {% endblock content %}

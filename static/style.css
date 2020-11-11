@@ -1,6 +1,6 @@
 #header {
   text-decoration: none;
-  color: rgb(190, 9, 100);
+  color: rgb(245, 58, 151);
   font-family: 'Times New Roman', Times, serif;
   font-size: 28px;
   margin: 0px;
@@ -15,7 +15,7 @@ h1 {
 }
 
 #top_of_page {
-  background-color: rgba(250, 236, 47, 0.44);
+  background-color: rgba(250, 242, 23, 0.55);
   padding: 10px;
 
 }
@@ -26,6 +26,23 @@ h1 {
   outline: hotpink;
   font-size: 16px;
 
+}
+
+.parkland {
+  background-color: rgba(255, 192, 203, 0.344);
+  border: 2px solid hotpink;
+  padding: 20px;
+  text-align: left;
+  margin: 20px
+
+}
+
+#featured {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px;
+  padding: 20px;
 }
 
 body {
@@ -43,11 +60,18 @@ body {
 }
 
 
-
 .link {
   text-decoration: none;
-  color: rgb(255, 204, 0);
+  color: rgb(255, 238, 0);
   font-weight: bold;
+  font-size: larger;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: rgb(255, 0, 191);
+  font-weight: bold;
+  font-size: larger;
 }
 
 .linkb {
@@ -55,3 +79,4 @@ body {
   color: deeppink;
   
 }
+
