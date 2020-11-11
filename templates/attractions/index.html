@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Attractions</h2>
+    <h2 class = "pagetitle">Attractions!</h2>
 
-    <p>
+    <p class = "pagetitle">
        <button class ="button"> <a class = "linkb" href="/attractions/new">Add Attraction</a> </button>
     </p>
-    <div>
+    <section class = "featured">
     <ul class = "list">
         {% for attraction in attractions %}
         <li class="parkland"><a class = "link" href="/attractions/{{attraction.id}}">{{ attraction.name }}</a> in {{ attraction.land.name }}
@@ -18,12 +18,21 @@
                 {% endif %}
                </p>
             <p>My notes: {{ attraction.notes}} </p>
+            <p>
+                <button class = "button"><a class = "linkb" href="/attractions/{{attraction.id}}/edit">Edit</a></button>
+                </p>
+                <p>
+                <form class="delete-form" action="/attractions/{{attraction.id}}/delete" method="POST">
+                    <button class = "linkb">Delete</button>
+                </form>
+            </p>
         </li>
         {% endfor %}
     </ul>
-    </div>
-    <p>
+    </section>
+    <p class = "pagefoot">
         <button class ="button"> <a class = "linkb" href="/attractions/new">Add Attraction</a> </button>
     </p>
+    
     
 {% endblock content %}

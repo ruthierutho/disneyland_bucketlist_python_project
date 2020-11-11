@@ -1,18 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Still to See</h2>
-    <ul>
+    <h2 class = "pagetitle">Still to See!</h2>
+    <p class = "pagetitle">
+        <button class="button"> <a class = "linkb" href="/attractions/new">Add Attraction</a> </button>
+    </p>
+    <section class = "featured">
+    <ul class = "list">
         {% for attraction in attractions if attraction.visited == False %}
-        <li><a class = "link" href="/attractions/{{attraction.id}}">{{ attraction.name }}</a> in {{ attraction.land.name }}
+        <li class="parkland"><a class = "link" href="/attractions/{{attraction.id}}">{{ attraction.name }}</a> in {{ attraction.land.name }}
          
             <p>My notes: {{ attraction.notes}} </p>
+            <p>
+                <button class = "button"><a class = "linkb" href="/attractions/{{attraction.id}}/edit">Edit</a></button>
+                </p>
+                <p>
+                <form class="delete-form" action="/attractions/{{attraction.id}}/delete" method="POST">
+                    <button class = "linkb">Delete</button>
+                </form>
+            </p>
         </li>
         
             
         {% endfor %}
     </ul>
-    <p>
+    </section>
+    <p class = "pagefoot">
         <button class="button"> <a class = "linkb" href="/attractions/new">Add Attraction</a> </button>
     </p>
     

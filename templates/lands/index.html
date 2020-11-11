@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<section id = "featured">
+<h2 class = "pagetitle">Save your magical memories forever!</h2>
+<section class = "featured">
    <div class = "parkland">
     <h2 class = "plheader">Disneyland Park:</h2>
     <ul class = "list">
-        {% for land in lands if land.park.name == "Magic Kingdom" %}
+        {% for land in lands if land.park.name == "Disneyland Park" %}
         <li><a class = "link" href="/lands/{{land.id}}">{{ land.name }}</a>
            <p> 
             {% if land.visited == True %}
@@ -23,9 +24,9 @@
      </p>
     </div>
     <div class = "parkland">
-    <h2 class = "plheader">Disney Studios:</h2>
+    <h2 class = "plheader">Walt Disney Studios Park:</h2>
     <ul class = "list">
-        {% for land in lands if land.park.name == "Disney Studios" %}
+        {% for land in lands if land.park.name == "Walt Disney Studios Park" %}
         <li><a class = "link" href="/lands/{{land.id}}">{{ land.name }}</a>
            <p> 
             {% if land.visited == True %}

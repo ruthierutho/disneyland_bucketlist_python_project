@@ -12,12 +12,12 @@
         </p>
         <p>Notes: {{attraction.notes}}</p>
         <p>
-        <button><a class = "linkb" href="/attractions/{{attraction.id}}/edit">Edit</a></button>
-        </p>
-        <p>
-        <form class="delete-form" action="/attractions/{{attraction.id}}/delete" method="POST">
-            <button class = "linkb">Delete</button>
-        </form>
+            <button class = "button"><a class = "linkb" href="/attractions/{{attraction.id}}/edit">Edit</a></button>
+            </p>
+            <p>
+            <form class="delete-form" action="/attractions/{{attraction.id}}/delete" method="POST">
+                <button class = "linkb">Delete</button>
+            </form>
         </p>
     </div>
 {% endblock content %}

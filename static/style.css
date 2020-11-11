@@ -16,24 +16,40 @@ h1 {
 
 h2 {
   color: rgb(235, 23, 129);
+  font-size: 25px;
+}
+
+.pagetitle {
+  margin-left: 40px;
+  margin-bottom: 0px;
+  font-size: 30px;
+}
+
+.pagefoot {
+  margin-left: 40px;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  font-size: 30px;
 }
 
 #top_of_page {
-  background-color: rgba(250, 242, 23, 0.55);
+  background-color: rgba(255, 192, 203, 0.885);
   padding-left: 30px;
 
 }
 
 #basenav {
   padding: 10px;
-  margin: 10px;
+  margin-left: 10px;
 }
 
 .navbar {
+  font-family: 'Times New Roman', Times, serif;
   text-decoration: none;
-  color: rgb(252, 59, 155);
+  color: rgb(245, 58, 151);
   outline: hotpink;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: bold;
   margin: 10px;
 
 }
@@ -42,29 +58,34 @@ h2 {
   text-decoration: none;
   color: yellow;
   outline: hotpink;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
 }
 
-.parkland {
-  background-color: rgba(255, 192, 203, 0.344);
-  border: 2px solid hotpink;
-  padding: 20px;
-  text-align: left;
-  margin: 20px
-
-}
-
-#featured {
+.featured {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 20px;
+  width: auto;
+  height: auto;
+  margin: 0px;
   padding: 20px;
 }
 
+.parkland {
+  background-color: rgba(255, 192, 203, 0.926);
+  border: 2px solid hotpink;
+  padding: 20px;
+  text-align: left;
+  margin: 20px;
+
+}
+
+
 body {
-  /* background: url('/static/images/castlebig.jpg'); */
-  background-size: cover;
+  background: url('/static/images/castlebig.jpg');
+  background-size: auto;
   background-repeat: repeat;
   background-color: rgb(247, 143, 160);
   color: rgb(255, 238, 0);
@@ -72,7 +93,7 @@ body {
   font-family: 'Times New Roman', Times, serif;
   font-size: 16px;
   margin: 0px;
-  padding: 20px;
+  padding: 0px;
 
 }
 
@@ -109,6 +130,7 @@ body {
 .linkb:hover {
   text-decoration: none;
   color: yellow;
+  font-size: medium;
 }
 
 .button {
@@ -121,3 +143,14 @@ body {
   margin-right: 10px;
 }
 
+.footer {
+  background-color: pink;
+  padding: 10px
+  position: absolute;
+}
+
+.footer_content {
+  text-align: center;
+  color: rgb(235, 23, 129);
+  margin: 0px;
+}
