@@ -7,6 +7,8 @@ from repositories import park_repository
 from repositories import land_repository
 from repositories import attraction_repository
 
+
+
 attraction_repository.delete_all()
 land_repository.delete_all()
 park_repository.delete_all()

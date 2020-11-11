@@ -24,7 +24,8 @@
      </p>
     </div>
     <div class = "parkland">
-    <h2 class = "plheader">Walt Disney Studios Park:</h2>
+    <h2 class = "plheader">Walt Disney</h2>
+    <h2 class = "plheader">Studios Park:</h2>
     <ul class = "list">
         {% for land in lands if land.park.name == "Walt Disney Studios Park" %}
         <li><a class = "link" href="/lands/{{land.id}}">{{ land.name }}</a>

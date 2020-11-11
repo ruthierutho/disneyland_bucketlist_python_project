@@ -23,3 +23,5 @@ CREATE TABLE attractions (
     visited BOOLEAN,
     notes TEXT
 );
+
+

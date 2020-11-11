@@ -40,6 +40,7 @@ def create_attraction():
     land = land_repository.select(land_id)
     attraction = Attraction(name, land, visited, notes)
     attraction_repository.save(attraction)
+    attraction_repository.update_land(attraction)
     return redirect("/still_to_see")
 
 #SHOW
