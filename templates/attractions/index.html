@@ -4,12 +4,12 @@
     <h2>Attractions</h2>
 
     <p>
-       <button> <a class = "linkb" href="/attractions/new">Add Attraction</a> </button>
+       <button class ="button"> <a class = "linkb" href="/attractions/new">Add Attraction</a> </button>
     </p>
-
-    <ul>
+    <div>
+    <ul class = "list">
         {% for attraction in attractions %}
-        <li><a class = "link" href="/attractions/{{attraction.id}}">{{ attraction.name }}</a> in {{ attraction.land.name }}
+        <li class="parkland"><a class = "link" href="/attractions/{{attraction.id}}">{{ attraction.name }}</a> in {{ attraction.land.name }}
             <p> 
                 {% if attraction.visited == True %}
                     -Seen!
@@ -19,9 +19,11 @@
                </p>
             <p>My notes: {{ attraction.notes}} </p>
         </li>
-        
-            
         {% endfor %}
     </ul>
+    </div>
+    <p>
+        <button class ="button"> <a class = "linkb" href="/attractions/new">Add Attraction</a> </button>
+    </p>
     
 {% endblock content %}

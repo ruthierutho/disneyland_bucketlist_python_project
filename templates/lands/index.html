@@ -3,8 +3,8 @@
 {% block content %}
 <section id = "featured">
    <div class = "parkland">
-    <h2>Magic Kindom:</h2>
-    <ul>
+    <h2 class = "plheader">Disneyland Park:</h2>
+    <ul class = "list">
         {% for land in lands if land.park.name == "Magic Kingdom" %}
         <li><a class = "link" href="/lands/{{land.id}}">{{ land.name }}</a>
            <p> 
@@ -19,12 +19,12 @@
         {% endfor %}
     </ul>
     <p>
-        <button><a class = "linkb" href="/lands/new">Add Land</a></button> 
+        <button class = "button"><a class = "linkb" href="/lands/new">Add Land</a></button> 
      </p>
     </div>
     <div class = "parkland">
-    <h2>Disney Studios:</h2>
-    <ul>
+    <h2 class = "plheader">Disney Studios:</h2>
+    <ul class = "list">
         {% for land in lands if land.park.name == "Disney Studios" %}
         <li><a class = "link" href="/lands/{{land.id}}">{{ land.name }}</a>
            <p> 
@@ -39,7 +39,7 @@
     </ul>
 
     <p>
-        <button><a class = "linkb" href="/lands/new">Add Land</a></button> 
+        <button class = "button"><a class = "linkb" href="/lands/new">Add Land</a></button> 
     </p>
     </div>
 </section>

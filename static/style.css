@@ -14,18 +14,35 @@ h1 {
   align-content: center;
 }
 
+h2 {
+  color: rgb(235, 23, 129);
+}
+
 #top_of_page {
   background-color: rgba(250, 242, 23, 0.55);
-  padding: 10px;
+  padding-left: 30px;
 
+}
+
+#basenav {
+  padding: 10px;
+  margin: 10px;
 }
 
 .navbar {
   text-decoration: none;
-  color: hotpink;
+  color: rgb(252, 59, 155);
   outline: hotpink;
   font-size: 16px;
+  margin: 10px;
 
+}
+
+.navbar:hover {
+  text-decoration: none;
+  color: yellow;
+  outline: hotpink;
+  font-size: 16px;
 }
 
 .parkland {
@@ -59,6 +76,15 @@ body {
 
 }
 
+.plheader {
+  text-align: left;
+}
+
+.list {
+  list-style-type: none;
+  padding-left: 0px;
+  
+}
 
 .link {
   text-decoration: none;
@@ -69,7 +95,7 @@ body {
 
 .link:hover {
   text-decoration: none;
-  color: rgb(255, 0, 191);
+  color: rgb(235, 23, 129);;
   font-weight: bold;
   font-size: larger;
 }
@@ -83,5 +109,15 @@ body {
 .linkb:hover {
   text-decoration: none;
   color: yellow;
+}
+
+.button {
+  background-color: pink;
+  outline: hotpink;
+  outline-style: solid;
+  outline-width: thin;
+  border: hotpink;
+  padding: 5px;
+  margin-right: 10px;
 }
 

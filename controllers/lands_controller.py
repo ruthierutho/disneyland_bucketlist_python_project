@@ -10,7 +10,8 @@ lands_blueprint = Blueprint("lands", __name__)
 @lands_blueprint.route("/lands")
 def lands():
     lands = land_repository.select_all()
-    return render_template("lands/index.html", lands = lands)
+    attractions = attraction_repository.select_all()
+    return render_template("lands/index.html", lands = lands, attractions = attractions)
 
 #NEW
 @lands_blueprint.route("/lands/new", methods=['GET'])
