@@ -77,6 +77,11 @@ body {
 .linkb {
   text-decoration: none;
   color: deeppink;
-  
+  font-size: medium;
+}
+
+.linkb:hover {
+  text-decoration: none;
+  color: yellow;
 }
 
