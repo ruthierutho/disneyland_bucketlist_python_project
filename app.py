@@ -1,8 +1,8 @@
 from flask import Flask, render_template
 
-from controllers.park_controller import parks_blueprint
-from controllers.land_controller import lands_blueprint
-from controllers.attraction_controller import attractions_blueprint
+from controllers.parks_controller import parks_blueprint
+from controllers.lands_controller import lands_blueprint
+from controllers.attractions_controller import attractions_blueprint
 
 app = Flask(__name__)
 

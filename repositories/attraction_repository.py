@@ -49,3 +49,9 @@ def update(attraction):
     sql = "UPDATE attractions SET (name, land_id, visited, notes) = (%s, %s, %s, %s) WHERE id = %s"
     values = [attraction.name, attraction.land.id, attraction.visited, attraction.notes, attraction.id]
     run_sql(sql, values)
+
+def update_land(attraction):
+    sql = "UPDATE lands SET visited = %s WHERE id = %s"
+    values = [attraction.visited, attraction.land.id]
+    run_sql(sql, values)
+

@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, Blueprint
 
 from models.attraction import Attraction
+from models.land import Land
 from repositories import park_repository
 from repositories import land_repository
 from repositories import attraction_repository
@@ -64,6 +65,7 @@ def update_attraction(id):
     land = land_repository.select(land_id)
     attraction = Attraction(name, land, visited, notes, id)
     attraction_repository.update(attraction)
+    attraction_repository.update_land(attraction)
     return redirect("/attractions")
 
 #DELETE
