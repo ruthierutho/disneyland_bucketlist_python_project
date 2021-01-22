@@ -9,6 +9,7 @@ itsdangerous==1.1.0
 Jinja2==2.11.2
 MarkupSafe==1.1.1
 pipenv==2020.11.15
+psycopg2==2.8.6
 psycopg2-binary==2.8.6
 six==1.15.0
 virtualenv==20.4.0
