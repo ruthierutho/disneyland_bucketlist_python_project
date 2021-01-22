@@ -4,7 +4,11 @@
   
 <h2 class = "pagetitle">Save your magical memories forever!</h2>
 <section class = "featured">
-   <div class = "parkland2">
+    <div class = "parkland">
+        <h3 class = "plheader">Welcome!</h3>
+        <p>Click 'Add Land' to create new entries for lands within the Disney Parks. Add new attractions to your list and explore all the magic there is to find! Create notes to cherish memories and reminisce all the magical good times! (This app is just for fun! Disney own all rights to all things Disney.)</p>
+    </div>
+   <div class = "parkland">
     <h3 class = "plheader">Disneyland Park:</h3>
     <ul class = "list">
         {% for land in lands if land.park.name == "Disneyland Park" %}
@@ -24,7 +28,7 @@
         <button class = "button"><a class = "linkb" href="/lands/new">Add Land</a></button> 
      </p>
     </div>
-    <div class = "parkland2">
+    <div class = "parkland">
     <h3 class = "plheader">Walt Disney</h3>
     <h3 class = "plheader">Studios Park:</h3>
     <ul class = "list">
