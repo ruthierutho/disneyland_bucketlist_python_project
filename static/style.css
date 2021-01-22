@@ -90,6 +90,17 @@ h2 {
 
 }
 
+.parkland2 {
+  background-color: lightcoral;
+  border: 5px solid hotpink;
+  padding: 20px;
+  text-align: left;
+  margin: 20px;
+  border-radius: 5px;
+  width: 70%;
+
+}
+
 
 body {
   /* background: url('/static/images/castlebig.jpg'); */
@@ -108,6 +119,7 @@ body {
 .plheader {
   text-align: left;
   margin: 0px;
+  text-emphasis: bold;
 }
 
 .list {
