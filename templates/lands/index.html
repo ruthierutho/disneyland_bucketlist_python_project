@@ -2,6 +2,10 @@
 
 {% block content %}
 <h2 class = "pagetitle">Save your magical memories forever!</h2>
+<div>
+    {% for land in lands %}
+    <li><a class = "link" href="/lands/{{land.id}}">{{ land.name }}</a></li>
+</div>
 <section class = "featured">
    <div class = "parkland">
     <h3 class = "plheader">Disneyland Park:</h3>
