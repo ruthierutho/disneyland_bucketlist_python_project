@@ -6,7 +6,7 @@
 <section class = "featured">
     <div class = "parkland">
         <h3 class = "plheader">Welcome!</h3>
-        <p>This app has been made using Python and Flask! It's a bucket list for all your Disneyland Paris plans! Click 'Add Land' to create new entries for lands within the Disney Parks. Add new attractions to your list, mark off the onces you've seen, and explore all the magic there is to find! Create notes to cherish memories and reminisce all the magical good times! </p>
+        <p>This app has been made using Python and Flask! It's a bucket list for all your Disneyland Paris plans! Click 'Add Attractions' to create new entries for attractions you would like to visit within lands in the two Disney Parks. Add new attractions to your list, mark off the onces you've seen, and explore all the magic there is to find! Create notes to cherish memories and reminisce all the magical good times! </p>
         <p >(This app is just for fun! Disney own all rights to all things Disney.)</p>
         <a class = "linkb" href="https://github.com/ruthierutho/disneyland_bucketlist_python_project">github of project files here</a>
     </div>
@@ -27,7 +27,7 @@
         {% endfor %}
     </ul>
     <p>
-        <button class = "button"><a class = "linkb" href="/lands/new">Add Land</a></button> 
+        <button class = "button"><a class = "linkb" href="/attractions/new">Add Attractions</a></button> 
      </p>
     </div>
     <div class = "parkland">
@@ -48,7 +48,7 @@
     </ul>
 
     <p>
-        <button class = "button"><a class = "linkb" href="/lands/new">Add Land</a></button> 
+        <button class = "button"><a class = "linkb" href="/attractions/new">Add Attractions</a></button> 
     </p>
     </div>
 
@@ -56,8 +56,4 @@
 
 </section>
 
-<p>
-    <button class= "button"><a class = "linkb" href="/parks/new">Add Park</a></button>
-</p>
-    
 {% endblock content %}
