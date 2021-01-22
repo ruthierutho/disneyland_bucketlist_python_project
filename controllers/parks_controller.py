@@ -11,7 +11,7 @@ parks_blueprint = Blueprint("parks", __name__)
 def parks():
     parks = park_repository.select_all()
     lands = land_repository.select_all()
-    return render_template("/lands/index.html", parks = parks, lands = lands)
+    return render_template("/parks/index.html", parks = parks, lands = lands)
 
 #NEW
 @parks_blueprint.route("/parks/new", methods=['GET'])
