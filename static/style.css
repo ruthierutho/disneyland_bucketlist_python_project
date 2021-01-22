@@ -1,22 +1,23 @@
 #header {
   text-decoration: none;
-  color: rgb(245, 58, 151);
+  color:rgb(255, 192, 203);
   font-family: 'Times New Roman', Times, serif;
-  font-size: 28px;
+  font-size: 50px;
   margin: 0px;
-  align-content: center;
+  text-align: center;
    
 } 
 
 h1 {
   margin: 0px;
   padding: 10px;
-  align-content: center;
+ 
 }
 
 h2 {
-  color: rgb(235, 23, 129);
+  color: lightcoral;
   font-size: 25px;
+  text-align: center;
 }
 
 .pagetitle {
@@ -33,24 +34,29 @@ h2 {
 }
 
 #top_of_page {
-  background-color: rgba(255, 192, 203, 0.885);
+  background-color: lightcoral;
+  padding-top: 8%;
   padding-left: 30px;
+  height: 38%;
 
 }
 
 #basenav {
   padding: 10px;
   margin-left: 10px;
+ text-align: center;
+
 }
 
 .navbar {
   font-family: 'Times New Roman', Times, serif;
   text-decoration: none;
-  color: rgb(245, 58, 151);
-  outline: hotpink;
+  color: lightcoral;
+  background-color: rgb(255, 192, 203);
   font-size: 20px;
   font-weight: bold;
   margin: 10px;
+
 
 }
 
@@ -71,24 +77,26 @@ h2 {
   height: auto;
   margin: 0px;
   padding: 20px;
+
 }
 
 .parkland {
-  background-color: rgba(255, 192, 203, 0.926);
-  border: 2px solid hotpink;
+  background-color: lightcoral;
+  border: 5px solid hotpink;
   padding: 20px;
   text-align: left;
   margin: 20px;
+  border-radius: 5px;
 
 }
 
 
 body {
-  background: url('/static/images/castlebig.jpg');
+  /* background: url('/static/images/castlebig.jpg'); */
   background-size: auto;
   background-repeat: repeat;
-  background-color: rgb(247, 143, 160);
-  color: rgb(255, 238, 0);
+  background-color: rgb(255, 192, 203);
+  color: rgb(255, 192, 203);
   text-decoration: none;
   font-family: 'Times New Roman', Times, serif;
   font-size: 16px;
@@ -127,9 +135,10 @@ body {
 
 .link {
   text-decoration: none;
-  color: rgb(255, 238, 0);
+  color: rgb(255, 192, 203);
   font-weight: bold;
   font-size: larger;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .link:hover {
@@ -143,6 +152,8 @@ body {
   text-decoration: none;
   color: deeppink;
   font-size: medium;
+  font-family: 'Times New Roman', Times, serif;
+  
 }
 
 .linkb:hover {
@@ -153,19 +164,29 @@ body {
 
 .button {
   background-color: pink;
-  outline: hotpink;
-  outline-style: solid;
-  outline-width: thin;
-  border: hotpink;
+  color: deeppink;
+  font-size: medium;
   padding: 5px;
   margin-right: 10px;
+  border: 2px solid hotpink;
+  border-radius: 4px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
-.footer {
+.button:hover {
+  text-decoration: none;
+  color: yellow;
+  font-size: medium;
+
+}
+
+
+
+/* .footer {
   background-color: pink;
   padding: 10px
   position: absolute;
-}
+} */
 
 .footer_content {
   text-align: center;
