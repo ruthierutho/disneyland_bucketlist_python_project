@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %} 
+<div class = "parkland">
     <h3>Add a Land</h3>
     <form action="/lands" method="POST">
         <label for="name">Name:</label>
@@ -18,6 +19,6 @@
         </select>
         <input class = "linkb" type="submit" value="add">
     </form>    
-
+</div>
 
 {% endblock content %}  
