@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class = "parkland">
 <h3>Edit a Land</h3>
 <form action="/lands/{{land.id}}" method="POST">
     <label for="name">Edit a land:</label>
@@ -19,7 +20,8 @@
                 No</option>
         </select>
     <input type="submit" value="update">
-</form>    
+</form>   
+</div>   
 
 
 

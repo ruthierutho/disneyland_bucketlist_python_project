@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class = "parkland">
 <h3>Edit Attraction</h3>
 <form action="/attractions/{{attraction.id}}" method="POST">
     <p>
@@ -28,7 +29,8 @@
     <textarea name="notes" id="notes" cols="20" rows="2" value="{{ attraction.notes }}">{{ attraction.notes }}</textarea>
     </p>
     <input type="submit" value="update">
-</form>       
+</form>      
+</div> 
 
 
 {% endblock content %}
