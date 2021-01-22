@@ -35,7 +35,7 @@ def create_land():
 @lands_blueprint.route("/lands/<id>", methods=['GET'])
 def show_land(id):
     land = land_repository.select(id)
-    return render_template('lands/show.html', land = land, attractions = attractions)
+    return render_template('lands/show.html', land = land)
 
 #EDIT
 @lands_blueprint.route("/lands/<id>/edit", methods=['GET'])

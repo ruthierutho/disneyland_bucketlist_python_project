@@ -10,10 +10,7 @@
                 -Still to see!
             {% endif %}
         </p>
-        <p>
-            {% for attraction in attractions if attraction.land.id = land.id%}
-            {{attraction.name}}
-        </p>
+       
         <p>
         <button><a class = "linkb" href="/lands/{{land.id}}/edit">Edit</a></button>
         </p>
