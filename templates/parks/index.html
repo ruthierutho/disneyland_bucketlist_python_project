@@ -1,16 +1,55 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h3>Parks</h3>
+
 
     <p>
         <button><a class = "linkb" href="/parks/new">Add Park</a></button>
     </p>
-    <ul>
-        {% for park in all_parks %}
-        <li><a class = "link" href="/parks/{{park.id}}">{{ park.name }}</a></li>
+  
+<h2 class = "pagetitle">Save your magical memories forever!</h2>
+<section class = "featured">
+   <div class = "parkland">
+    <h3 class = "plheader">Disneyland Park:</h3>
+    <ul class = "list">
+        {% for land in lands if land.park.name == "Disneyland Park" %}
+        <li><a class = "link" href="/lands/{{land.id}}">{{ land.name }}</a>
+           <p> 
+            {% if land.visited == True %}
+                -Seen!
+            {% else %}
+                -Still to see!
+            {% endif %}
             
+           </p>
+        </li>
         {% endfor %}
     </ul>
+    <p>
+        <button class = "button"><a class = "linkb" href="/lands/new">Add Land</a></button> 
+     </p>
+    </div>
+    <div class = "parkland">
+    <h3 class = "plheader">Walt Disney</h3>
+    <h3 class = "plheader">Studios Park:</h3>
+    <ul class = "list">
+        {% for land in lands if land.park.name == "Walt Disney Studios Park" %}
+        <li><a class = "link" href="/lands/{{land.id}}">{{ land.name }}</a>
+           <p> 
+            {% if land.visited == True %}
+                -Seen!
+            {% else %}
+                -Still to see!
+            {% endif %}
+           </p>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <p>
+        <button class = "button"><a class = "linkb" href="/lands/new">Add Land</a></button> 
+    </p>
+    </div>
+</section>
     
 {% endblock content %}
