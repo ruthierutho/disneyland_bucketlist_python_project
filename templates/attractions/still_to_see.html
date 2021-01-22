@@ -6,11 +6,12 @@
         <button class="button"> <a class = "linkb" href="/attractions/new">Add Attraction</a> </button>
     </p>
     <section class = "featured">
-    <ul class = "list">
+    <ul class = "list_attractions">
         {% for attraction in attractions if attraction.visited == False %}
-        <li class="parkland"><a class = "link" href="/attractions/{{attraction.id}}">{{ attraction.name }}</a> in {{ attraction.land.name }}
+        <li class="parkland"><a class = "link" href="/attractions/{{attraction.id}}">{{ attraction.name }}</a>
+            <p>in {{ attraction.land.name }}</p>
          
-            <p>My notes: {{ attraction.notes}} </p>
+            <p class="notes">My notes: {{ attraction.notes}} </p>
             <p>
                 <button class = "button"><a class = "linkb" href="/attractions/{{attraction.id}}/edit">Edit</a></button>
                 </p>

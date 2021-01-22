@@ -105,7 +105,24 @@ body {
 .list {
   list-style-type: none;
   padding-left: 0px;
+ 
   
+}
+.list_attractions {
+  list-style-type: none;
+  padding-left: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: auto;
+  height: auto;
+  margin: 0px;
+  padding: 20px;
+  
+}
+
+.notes {
+  width: 150px;
 }
 
 .link {

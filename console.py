@@ -29,13 +29,13 @@ land_repository.save(land4)
 land5 = Land("Production Courtyard", park2, False)
 land_repository.save(land5)
 
-attraction1 = Attraction("It's a small world", land1, True, "So cute!")
+attraction1 = Attraction("It's a small world", land1, True, "So cute! Song in my head forver now!!")
 attraction_repository.save(attraction1)
-attraction2 = Attraction("Space Mountain", land2, False, "Bit scared!")
+attraction2 = Attraction("Space Mountain", land2, False, "Bit scared! Hope it's not too fast!!!")
 attraction_repository.save(attraction2)
-attraction3 = Attraction("Peter Pan's Flight", land1, False, "So excited for this!")
+attraction3 = Attraction("Peter Pan's Flight", land1, False, "So excited I could cry!!!")
 attraction_repository.save(attraction3)
-attraction4 = Attraction("Crush's Coaster", land3, False, "Looks awesome!")
+attraction4 = Attraction("Crush's Coaster", land3, False, "Looks awesome, dude!")
 attraction_repository.save(attraction4)
 
 
